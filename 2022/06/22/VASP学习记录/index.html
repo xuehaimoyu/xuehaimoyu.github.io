@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xuehaimoyu.github.io">
-  <title>Archives: 2022/5 | This is a website</title>
+  <title>VASP学习记录（更新中） | This is a website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="This is a website">
-<meta property="og:url" content="https://xuehaimoyu.github.io/archives/2022/05/index.html">
+  <meta name="description" content="记录一下密度泛函理论工具VASP的使用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VASP学习记录（更新中）">
+<meta property="og:url" content="https://xuehaimoyu.github.io/2022/06/22/VASP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="This is a website">
+<meta property="og:description" content="记录一下密度泛函理论工具VASP的使用方法">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-06-22T01:22:01.000Z">
+<meta property="article:modified_time" content="2022-06-23T12:18:47.462Z">
 <meta property="article:author" content="xuehaimoyu">
+<meta property="article:tag" content="计算工具">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="This is a website" type="application/atom+xml">
@@ -136,102 +141,194 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-VASP学习记录" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/05/25/2022%E5%A4%A7%E4%BA%8C%E4%B8%8B%E5%9B%9E%E5%BF%86%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-  	<time datetime="2022-05-25T08:37:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-25</time>
-</a>
-
-
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/25/2022%E5%A4%A7%E4%BA%8C%E4%B8%8B%E5%9B%9E%E5%BF%86%E8%AE%B0%E5%BD%95/">2022大二下回忆记录（纯流水账）</a>
+    <h1 class="article-title" itemprop="name">
+      VASP学习记录（更新中）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2022/06/22/VASP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="archive-article-date">
+  	<time datetime="2022-06-22T01:22:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-22</time>
+</a>
+
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>记录一下密度泛函理论工具VASP的使用方法 </p>
+<span id="more"></span>
+
+<h1 id="vasp学习记录"><a href="#vasp学习记录" class="headerlink" title="vasp学习记录"></a>vasp学习记录</h1><h2 id="总体流程"><a href="#总体流程" class="headerlink" title="总体流程"></a>总体流程</h2><p>准备好超算资源和VASP，准备好文件传输的SSH</p>
+<p>vasp计算需要四个文件：</p>
+<p>INCAR  KPOINTS POSCAR POTCAR</p>
+<p>后面边学习边补充4个文件的一些配置方法</p>
+<p>通过SSH将文件转移到集群自己的文件夹里</p>
+<p>在正式计算前一定要进行ENCUT计算，以节省计算时间（具体后面补充）</p>
+<p>准备完全后，准备好run_vasp.sh提交计算，获得返回文件进行处理分析</p>
+<h2 id="输入文件相关参数"><a href="#输入文件相关参数" class="headerlink" title="输入文件相关参数"></a>输入文件相关参数</h2><h4 id="1-INCAR"><a href="#1-INCAR" class="headerlink" title="1 INCAR"></a>1 INCAR</h4><p>需要设置的一些关键词：</p>
+<p>SYSTEM &#x3D; 体系名称</p>
+<p>ISTART &#x3D; 0   开始新的计算</p>
+<p>取值可取0，1，2，3</p>
+<p>   0：开始新的计算</p>
+<p>   1：有WAVECAR的情况下，接着计算，也用在测试ENCUT的收敛性以及计算结合能曲线（待实操验证）</p>
+<p>  2 接着计算，基矢不变</p>
+<p>  3 接着计算 读入上一次计算得到的电荷密度和波函数（不推荐）</p>
+<p>ICHARG &#x3D;2 从原子的电荷密度重叠构造初始电荷密度</p>
+<p>备注：ISTART 为0 默认值为2</p>
+<p>ENCUT &#x3D;数值 平面波的切断动能（好像与精度相关）</p>
+<p>有关电子态密度：smearing方法（具体怎么选取还存疑）</p>
+<p>ISMEAR&#x3D;1 ，SIGMA&#x3D;0.2（默认值）</p>
+<p>ISMEAR&#x3D;-1，fermi方法，0：Gaussian 方法</p>
+<p>1-N：Methfessel-Paxton N阶方法</p>
+<p>以及-2，-3，-4对应的一些方法</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果，但是还没开通<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">计算工具</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xuehaimoyu.github.io/2022/06/22/VASP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/05/22/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/" class="archive-article-date">
-  	<time datetime="2022-05-22T15:53:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/05/25/2022%E5%A4%A7%E4%BA%8C%E4%B8%8B%E5%9B%9E%E5%BF%86%E8%AE%B0%E5%BD%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2022大二下回忆记录（纯流水账）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/05/22/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">网站搭建</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -258,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
