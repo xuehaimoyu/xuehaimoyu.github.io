@@ -16,7 +16,7 @@
 <meta property="og:description" content="记录一下密度泛函理论工具VASP的使用方法">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-06-22T01:22:01.000Z">
-<meta property="article:modified_time" content="2022-06-23T12:18:47.462Z">
+<meta property="article:modified_time" content="2022-06-25T07:42:20.235Z">
 <meta property="article:author" content="xuehaimoyu">
 <meta property="article:tag" content="计算工具">
 <meta name="twitter:card" content="summary">
@@ -189,6 +189,10 @@
 <p>ISMEAR&#x3D;-1，fermi方法，0：Gaussian 方法</p>
 <p>1-N：Methfessel-Paxton N阶方法</p>
 <p>以及-2，-3，-4对应的一些方法</p>
+<p>ISPIN：是否进行自旋极化的计算</p>
+<p>1 不进行 2 进行</p>
+<p>LWAVE：是否在WAVECAR输出波函数</p>
+<h4 id="2-POTCAR"><a href="#2-POTCAR" class="headerlink" title="2  POTCAR"></a>2  POTCAR</h4><p>赝势文件 有一个赝势文件库</p>
 
       
 
@@ -400,15 +404,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">计算机学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">计算工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
             
             <div class="clearfix"></div>
