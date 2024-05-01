@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;⚛️&lt;/text&gt;&lt;/svg&gt;">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>VScode编译latex记录&nbsp;|&nbsp;个人小站</title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="VScode编译latex记录">
+  
+  
+    <meta property="og:image" content="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🧐&lt;/text&gt;&lt;/svg&gt;">
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;⚛️&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😀&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>About</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+      <div class="Header__Icon">
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🧐&lt;/text&gt;&lt;/svg&gt;"></span>
+      </div>
+    
+    <h1 class="Header__Title">VScode编译latex记录</h1>
+    
+      <div class="DateTagBar">
+        
+          <span class="DateTagBar__Item DateTagBar__Date">Posted on Wed, May 1, 2024</span>
+        
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--brown">
+            <a href="tag/latex.html">latex</a>
+          </span>
+        
+          <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--pink">
+            <a href="tag/record.html">record</a>
+          </span>
+        
+      </div>
+    
+  </header>
+  <article id="https://www.notion.so/bd3143e1ed864f0bb2e489b4342d5653" class="PageRoot"><div id="https://www.notion.so/3ca9be83e6094f52baa7517322ba39c3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">本文主要记录使用vscode编译latex的方法，希望能有所帮助。</span></span></p></div><div id="https://www.notion.so/de3270b04bb14672931108da660e1210" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/2c06773970574e649dfc162d7436ea09" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">毕业设计参考模版：</span></span></p></div><div></div><div id="https://www.notion.so/79c9d7d0a12e4ad2ba749822a25c9806" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">感谢前辈大佬们的付出。</span></span></p></div><div id="https://www.notion.so/c51e3877a87c40c289df2cf93a6b993d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/69152c7f76d847c889cd10e9cadfa8d8" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">具体步骤：</span></span></p></div><div id="https://www.notion.so/c368e6ff46e943a799d5409f3f5587ce" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">（1）下载 Texlive。</span></span></p></div><div id="https://www.notion.so/dab3bea9b9b84e2eba48872eb486fa97" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">时间可能比较久。</span></span></p></div><div id="https://www.notion.so/cfecf25a5af64bc48a02870c65f41dc5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">（2）下载VScode。</span></span></p></div><div id="https://www.notion.so/df8f0807638f4e019a68410ac2ab7c78" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">（3）下载VScode的latex插件：</span></span></p></div><div id="https://www.notion.so/2ee0db890e86400ab208d4566c54e9a6" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">latex workshop</span></span></p></div><div id="https://www.notion.so/f20ab59b30b644c2958bdfc1121693d6" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">然后打开设置：</span></span></p></div><div id="https://www.notion.so/e5525c85efe84352b6e340ce21c58e2b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">粘贴：</span></span></p></div><pre id="https://www.notion.so/982e6f6b0ed746aca4090fc695a92d47" class="Code Code--NoWrap"><code><span class="SemanticStringArray"><span class="SemanticString"><span><span class="token punctuation">{</span>
+    <span class="token comment">//------------------------------LaTeX 配置----------------------------------</span>
+       <span class="token comment">// 设置是否自动编译</span>
+       <span class="token string">"latex-workshop.latex.autoBuild.run"</span><span class="token operator">:</span><span class="token string">"never"</span><span class="token punctuation">,</span>
+       <span class="token comment">//右键菜单</span>
+       <span class="token string">"latex-workshop.showContextMenu"</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+       <span class="token comment">//从使用的包中自动补全命令和环境</span>
+       <span class="token string">"latex-workshop.intellisense.package.enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+       <span class="token comment">//编译出错时设置是否弹出气泡设置</span>
+       <span class="token string">"latex-workshop.message.error.show"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+       <span class="token string">"latex-workshop.message.warning.show"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+       <span class="token comment">// 编译工具和命令</span>
+       <span class="token string">"latex-workshop.latex.tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"xelatex"</span><span class="token punctuation">,</span>
+               <span class="token string">"command"</span><span class="token operator">:</span> <span class="token string">"xelatex"</span><span class="token punctuation">,</span>
+               <span class="token string">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"-synctex=1"</span><span class="token punctuation">,</span>
+                   <span class="token string">"-interaction=nonstopmode"</span><span class="token punctuation">,</span>
+                   <span class="token string">"-file-line-error"</span><span class="token punctuation">,</span>
+                   <span class="token string">"-shell-escape"</span><span class="token punctuation">,</span><span class="token comment">//新加入的选项</span>
+                   <span class="token string">"%DOCFILE%"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"pdflatex"</span><span class="token punctuation">,</span>
+               <span class="token string">"command"</span><span class="token operator">:</span> <span class="token string">"pdflatex"</span><span class="token punctuation">,</span>
+               <span class="token string">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"-synctex=1"</span><span class="token punctuation">,</span>
+                   <span class="token string">"-interaction=nonstopmode"</span><span class="token punctuation">,</span>
+                   <span class="token string">"-file-line-error"</span><span class="token punctuation">,</span>
+                   <span class="token string">"-shell-escape"</span><span class="token punctuation">,</span><span class="token comment">//新加入的选项</span>
+                   <span class="token string">"%DOCFILE%"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           
+
+           <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"latexmk"</span><span class="token punctuation">,</span>
+            <span class="token string">"command"</span><span class="token operator">:</span> <span class="token string">"latexmk"</span><span class="token punctuation">,</span>
+            <span class="token string">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token string">"-synctex=1"</span><span class="token punctuation">,</span>
+              <span class="token string">"-interaction=nonstopmode"</span><span class="token punctuation">,</span>
+              <span class="token string">"-file-line-error"</span><span class="token punctuation">,</span>
+              <span class="token string">"-shell-escape"</span><span class="token punctuation">,</span><span class="token comment">//新加入的选项</span>
+              <span class="token string">"-pdf"</span><span class="token punctuation">,</span>
+              <span class="token string">"-outdir=%OUTDIR%"</span><span class="token punctuation">,</span>
+              <span class="token string">"%DOC%"</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token string">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+          <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"lualatex"</span><span class="token punctuation">,</span>
+            <span class="token string">"command"</span><span class="token operator">:</span> <span class="token string">"lualatex"</span><span class="token punctuation">,</span>
+            <span class="token string">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">"-synctex=1"</span><span class="token punctuation">,</span>
+                <span class="token string">"-interaction=nonstopmode"</span><span class="token punctuation">,</span>
+                
+                <span class="token string">"-file-line-error"</span><span class="token punctuation">,</span>
+                <span class="token string">"-shell-escape"</span><span class="token punctuation">,</span><span class="token comment">//这个命令行在网上的Latex Workshop设置里一般没有，所以直接recipe会报错</span>
+                <span class="token string">"%DOCFILE%"</span>
+            <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"xelatexmk"</span><span class="token punctuation">,</span>
+                <span class="token string">"command"</span><span class="token operator">:</span> <span class="token string">"latexmk"</span><span class="token punctuation">,</span>
+                <span class="token string">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token string">"-xelatex"</span><span class="token punctuation">,</span>
+                    <span class="token string">"-synctex=1"</span><span class="token punctuation">,</span>
+                    <span class="token string">"-quiet"</span><span class="token punctuation">,</span>
+                    <span class="token string">"-interaction=nonstopmode"</span><span class="token punctuation">,</span>
+                    <span class="token string">"-file-line-error"</span><span class="token punctuation">,</span>
+                    <span class="token string">"-halt-on-error"</span><span class="token punctuation">,</span>
+                    <span class="token string">"-shell-escape"</span><span class="token punctuation">,</span>
+                    <span class="token string">"%DOC%"</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"bibtex"</span><span class="token punctuation">,</span>
+               <span class="token string">"command"</span><span class="token operator">:</span> <span class="token string">"bibtex"</span><span class="token punctuation">,</span>
+               <span class="token string">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"%DOCFILE%"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token comment">// 用于配置编译链</span>
+       <span class="token string">"latex-workshop.latex.recipes"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"PDFLaTeX"</span><span class="token punctuation">,</span>
+            <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">"pdflatex"</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"LuaLaTeX"</span><span class="token punctuation">,</span>
+            <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">"lualatex"</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"XeLaTeX"</span><span class="token punctuation">,</span>
+               <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"xelatex"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"BibTeX"</span><span class="token punctuation">,</span>
+               <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"bibtex"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"LaTeXmk"</span><span class="token punctuation">,</span>
+               <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"latexmk"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"xelatex -> bibtex -> xelatex*2"</span><span class="token punctuation">,</span>
+               <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"xelatex"</span><span class="token punctuation">,</span>
+                   <span class="token string">"bibtex"</span><span class="token punctuation">,</span>
+                   <span class="token string">"xelatex"</span><span class="token punctuation">,</span>
+                   <span class="token string">"xelatex"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+               <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"pdflatex -> bibtex -> pdflatex*2"</span><span class="token punctuation">,</span>
+               <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                   <span class="token string">"pdflatex"</span><span class="token punctuation">,</span>
+                   <span class="token string">"bibtex"</span><span class="token punctuation">,</span>
+                   <span class="token string">"pdflatex"</span><span class="token punctuation">,</span>
+                   <span class="token string">"pdflatex"</span>
+               <span class="token punctuation">]</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span>
+            <span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"latexmk (xelatex)"</span><span class="token punctuation">,</span>
+            <span class="token string">"tools"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">"xelatexmk"</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+       <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token comment">//文件清理。此属性必须是字符串数组</span>
+       <span class="token string">"latex-workshop.latex.clean.fileTypes"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+           <span class="token string">"*.aux"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.bbl"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.blg"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.idx"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.ind"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.lof"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.lot"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.out"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.toc"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.acn"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.acr"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.alg"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.glg"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.glo"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.gls"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.ist"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.fls"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.log"</span><span class="token punctuation">,</span>
+           <span class="token string">"*.fdb_latexmk"</span>
+       <span class="token punctuation">]</span><span class="token punctuation">,</span>
+       <span class="token comment">//设置为onFaild 在构建失败后清除辅助文件</span>
+       <span class="token string">"latex-workshop.latex.autoClean.run"</span><span class="token operator">:</span> <span class="token string">"onFailed"</span><span class="token punctuation">,</span>
+       <span class="token comment">// 使用上次的recipe编译组合</span>
+    <span class="token string">"latex-workshop.latex.recipe.default"</span><span class="token operator">:</span> <span class="token string">"lastUsed"</span><span class="token punctuation">,</span>
+       <span class="token comment">//使用 SumatraPDF 预览编译好的PDF文件</span>
+       <span class="token comment">// 设置VScode内部查看生成的pdf文件</span>
+       <span class="token string">"latex-workshop.view.pdf.viewer"</span><span class="token operator">:</span> <span class="token string">"tab"</span><span class="token punctuation">,</span>
+       <span class="token comment">// PDF查看器用于在\ref上的[View on PDF]链接</span>
+    <span class="token string">"latex-workshop.view.pdf.ref.viewer"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+    <span class="token string">"editor.wordWrap"</span><span class="token operator">:</span> <span class="token string">"on"</span><span class="token punctuation">,</span>
+    <span class="token string">"editor.renderControlCharacters"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">"Codegeex.Comment.LanguagePreference"</span><span class="token operator">:</span> <span class="token string">"中文"</span><span class="token punctuation">,</span>
+    <span class="token string">"Codegeex.Explanation.LanguagePreference"</span><span class="token operator">:</span> <span class="token string">"中文"</span><span class="token punctuation">,</span>
+    <span class="token string">"Codegeex.SidebarUI.LanguagePreference"</span><span class="token operator">:</span> <span class="token string">"中文"</span><span class="token punctuation">,</span>
+    <span class="token string">"workbench.colorTheme"</span><span class="token operator">:</span> <span class="token string">"Quiet Light"</span><span class="token punctuation">,</span>
+    <span class="token string">"Codegeex.Privacy"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">"editor.codeActionsOnSave"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span></span></span></span></code></pre><div id="https://www.notion.so/d85a19487a1e49a48e694228c8849f27" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">一些小Tips：</span></span></p></div><div id="https://www.notion.so/debd4fa81c29432085fa9e3e982a0eb1" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">注意如果参考文献编译不通过的话，将模版中的tongjithesis的设置参考文献格式：backend=biber改为backend=bibtex。</span></span></p></div><div id="https://www.notion.so/6fd6432b1f904a8684717d63e546055d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/133bd0f90e604442960f064b8c27a66d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">编译的时候选xelatex-bibtex-xelatex。</span></span></p></div><div id="https://www.notion.so/e203c979839244798c511346d7fdae68" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/a081895d3e054d988f2b68f342b7c730" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; 个人小站 2023</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
