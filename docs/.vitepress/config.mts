@@ -118,6 +118,6 @@ export default defineConfig({
       // 其余 locale 特定属性...
     }
   },
-    ignoreDeadLinks: true
+  ignoreDeadLinks: true
 })
 

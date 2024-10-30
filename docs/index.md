@@ -3,6 +3,9 @@
 layout: home
 
 hero:
+  image:
+    src: /front.jpg
+    alt: VitePress
   name: "个人博客"
   //text: "一个基于viterpess的个人小站"
   tagline: My Record

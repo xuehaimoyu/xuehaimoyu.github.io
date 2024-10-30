@@ -3,9 +3,12 @@
 layout: home
 
 hero:
-  name: "My personal website"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  image:
+    src: /front.jpg
+    alt: VitePress
+  name: "个人博客"
+  //text: "一个基于viterpess的个人小站"
+  tagline: My Record
   actions:
     - theme: brand
       text: Markdown Examples
