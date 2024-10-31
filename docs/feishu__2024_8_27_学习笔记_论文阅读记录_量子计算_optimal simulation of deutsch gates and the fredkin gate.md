@@ -1,8 +1,15 @@
 ---
-create_time: 1727403607
+layout: null
 title: Optimal simulation of Deutsch gates and the Fredkin gate
+hide: false
+hide_child: false
+keywords:
+  - learning_note
+  - Deutsch_Gate
+  - Fredkin Gate
 categories:
-  - 学习笔记
+  - learning_note
+create_time: 1727403607
 ---
 
 

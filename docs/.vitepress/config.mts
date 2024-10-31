@@ -9,24 +9,43 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      {text: '学习笔记', link: '/feishu__2024_8_27__学习笔记'}
+      {text: '日常博客', link: '/feishu__2024_8_26__日常博客'},
+      {text: '学习笔记', link: '/feishu__2024_8_27__学习笔记'},
+      {text: '技术博客', link: '/feishu__2024_9_31__技术博客'},
+      {text: "旅途记录", link: "/feishu__2024_9_31__旅途记录"}
+
     ],
 
     sidebar: [
       {
-        text: '学习笔记',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      },
-      {
-        "text": "首页",
-        "link": "/feishu__2024_8_26__首页",
+        "text": "日常博客",
+        "link": "/feishu__2024_8_26__日常博客",
         "items": [
           {
-            "text": "测试子页面",
-            "link": "/feishu__2024_8_26_首页_测试子页面"
+            "text": "个人博客搭建纪念",
+            "link": "/feishu__2024_8_26_日常博客_个人博客搭建纪念"
+          }
+        ],
+        "collapsed": false
+      },
+      {
+        "text": "技术博客",
+        "link": "/feishu__2024_9_31__技术博客",
+        "items": [
+          {
+            "text": "Vitepress网站搭建与更新记录",
+            "link": "/feishu__2024_9_31_技术博客_vitepress网站搭建与更新记录"
+          }
+        ],
+        "collapsed": false
+      },
+      {
+        "text": "旅途记录",
+        "link": "/feishu__2024_9_31__旅途记录",
+        "items": [
+          {
+            "text": "旅途记录",
+            "link": "/feishu__2024_9_31_旅途记录_中国"
           }
         ],
         "collapsed": false
@@ -37,7 +56,14 @@ export default defineConfig({
         "items": [
           {
             "text": "论文导读",
-            "link": "/feishu__2024_8_27_学习笔记_论文导读"
+            "link": "/feishu__2024_8_27_学习笔记_论文导读",
+            "items": [
+              {
+                "text": "论文导读",
+                "link": "/feishu__2024_9_31_学习笔记_论文导读_prl  volume 133 部分文章导读"
+              }
+            ],
+            "collapsed": false
           },
           {
             "text": "论文阅读记录",
@@ -71,7 +97,7 @@ export default defineConfig({
                 "link": "/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制",
                 "items": [
                   {
-                    "text": "变分量子KAN",
+                    "text": "未命名",
                     "link": "/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制_"
                   }
                 ],
@@ -81,12 +107,12 @@ export default defineConfig({
             "collapsed": false
           },
           {
-            "text": "AI基本范式学习",
-            "link": "/feishu__2024_9_16_学习笔记_ai基本范式学习",
+            "text": "AI学习",
+            "link": "/feishu__2024_9_16_学习笔记_ai学习",
             "items": [
               {
                 "text": "强化学习",
-                "link": "/feishu__2024_9_16_学习笔记_ai基本范式学习_强化学习"
+                "link": "/feishu__2024_9_16_学习笔记_ai学习_强化学习"
               }
             ],
             "collapsed": false

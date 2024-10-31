@@ -1,8 +1,14 @@
 ---
-create_time: 1727533595
+layout: null
 title: Fast Multiqubit Gates through Simultaneous Two-Qubit Gates
+hide: false
+hide_child: false
+keywords:
+  - learning_note
+  - Fast multiqubit gates
 categories:
-  - 学习笔记
+  - learning_note
+create_time: 1727533595
 ---
 
 
