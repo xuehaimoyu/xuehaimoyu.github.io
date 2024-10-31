@@ -1,7 +1,11 @@
 {
   "devDependencies": {
+    "install": "^0.13.0",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "^1.4.1"
+    "npm": "^10.9.0",
+    "oh-my-live2d": "^0.19.3",
+    "vitepress": "^1.4.1",
+    "vue": "^3.5.12"
   },
   "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
   "scripts": {

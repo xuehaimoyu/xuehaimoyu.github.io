@@ -7,6 +7,30 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                },
+              },
+            },
+          },
+        },
+      },
+    },
     nav: [
       { text: 'Home', link: '/' },
       {text: '日常博客', link: '/feishu__2024_8_26__日常博客'},
@@ -124,7 +148,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xuehaimoyu' }
-    ]
+    ],
   },
   markdown: {
     config: (md) => {
@@ -142,8 +166,10 @@ export default defineConfig({
       //link: '/en/guide' // 默认 /fr/ -- 显示在导航栏翻译菜单上，可以是外部的
 
       // 其余 locale 特定属性...
-    }
+    },
+    
   },
-  ignoreDeadLinks: true
+  ignoreDeadLinks: true,
+  
 })
 
