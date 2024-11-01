@@ -1,8 +1,15 @@
 ---
-create_time: 1727403607
+layout: null
 title: Optimal simulation of Deutsch gates and the Fredkin gate
+hide: false
+hide_child: false
+keywords:
+  - learning_note
+  - Deutsch_Gate
+  - Fredkin Gate
 categories:
-  - Study notes
+  - learning_note
+create_time: 1727403607
 ---
 
 ---
@@ -38,13 +45,12 @@ For the general Deutsch gate, the expression is as follows:
 
 $$V(\theta_{1}, \theta_{2})=\begin{pmatrix}1&0&0&0&0&0&0&0\\0&1&0&0&0&0&0&0\\0&0&1&0&0&0&0&0\\0&0&0&1&0&0&0&0\\0&0&0&0&1&0&0&0\\0&0&0&0&0&1&0&0\\0&0&0&0&0&0&e^{{i\theta_{1}}}&0\\0&0& 0&0&0&0&0&e^{{i\theta_{2}}}\end{pmatrix}.$$
 
-Q1: The representation of the Deutsch door here is a bit strange.
-
-Theorem 1: https://journals.aps.org/pra/pdf/10.1103/PhysRevA.88.010304
+Q1: The representation of the Deutsch door here is a bit strange.Theorem 1: https://journals.aps.org/pra/pdf/10.1103/PhysRevA.88.010304
 
 But the article is written by themselves
 
-<img src="/assets/UufWb6k7po6BQ2xCK73ckGEFnec.bmp" src-width="877" class="markdown-img m-auto" src-height="84" align="center"/>Deformation:
+<img src="/assets/UufWb6k7po6BQ2xCK73ckGEFnec.bmp" src-width="877" class="markdown-img m-auto" src-height="84" align="center"/>
+Deformation:
 
 $$\begin{aligned}V(0,\theta_{2}-\theta_{1})_{ABC}=V(\theta_1,\theta_2)_{ABC}W(-\theta_1)_{AB}=W(-\theta_1)_{AB}V(\theta_1,\theta_2)_{ABC}, \end{aligned}$$
 
@@ -84,9 +90,7 @@ $\mathrm{CX}_{A\to B}=\begin{pmatrix}1&0&0&0&0&0&0&0\\0&1&0&0&0&0&0&0\\0&0&1&0&0
 
 But this is actually contradictory to the conclusion, the determinant is -1, there should be 5, but in fact 4 is enough, indicating that there is indeed a problem with the condition setting.
 
-As for nature's article:
-
-<img src="/assets/AC6DbMyccoznZ1xlkXccbmc5nMd.bmp" src-width="890" class="markdown-img m-auto" src-height="920" align="center"/>
+As for nature's article:<img src="/assets/AC6DbMyccoznZ1xlkXccbmc5nMd.bmp" src-width="890" class="markdown-img m-auto" src-height="920" align="center"/>
 
 The use of 3 should be different from the classical tradition of qubits, which use three energy levels.
 

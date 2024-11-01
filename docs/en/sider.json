@@ -1,0 +1,147 @@
+[
+  {
+    "text": "日常博客",
+    "link": "/en/feishu__2024_8_26__日常博客",
+    "items": [
+      {
+        "text": "个人博客搭建纪念",
+        "link": "/en/feishu__2024_8_26_日常博客_个人博客搭建纪念"
+      }
+    ],
+    "collapsed": false
+  },
+  {
+    "text": "技术博客",
+    "link": "/en/feishu__2024_9_31__技术博客",
+    "items": [
+      {
+        "text": "Vitepress网站搭建与更新记录",
+        "link": "/en/feishu__2024_9_31_技术博客_vitepress网站搭建与更新记录"
+      },
+      {
+        "text": "偏微分方程求解总结",
+        "link": "/en/feishu__2024_10_1_技术博客_偏微分方程求解总结"
+      }
+    ],
+    "collapsed": false
+  },
+  {
+    "text": "旅途记录",
+    "link": "/en/feishu__2024_9_31__旅途记录",
+    "items": [
+      {
+        "text": "中国",
+        "link": "/en/feishu__2024_9_31_旅途记录_中国",
+        "items": [
+          {
+            "text": "上海",
+            "link": "/en/feishu__2024_10_1_旅途记录_中国_上海",
+            "items": [
+              {
+                "text": "外滩 陆家嘴",
+                "link": "/en/feishu__2024_10_1_旅途记录_中国_上海_外滩 陆家嘴"
+              },
+              {
+                "text": "临港 滴水湖 东海",
+                "link": "/en/feishu__2024_10_1_旅途记录_中国_上海_临港 滴水湖 东海"
+              }
+            ],
+            "collapsed": false
+          },
+          {
+            "text": "云南",
+            "link": "/en/feishu__2024_10_1_旅途记录_中国_云南"
+          },
+          {
+            "text": "北京",
+            "link": "/en/feishu__2024_10_1_旅途记录_中国_北京"
+          },
+          {
+            "text": "广东",
+            "link": "/en/feishu__2024_10_1_旅途记录_中国_广东"
+          },
+          {
+            "text": "四川",
+            "link": "/en/feishu__2024_10_1_旅途记录_中国_四川"
+          }
+        ],
+        "collapsed": false
+      }
+    ],
+    "collapsed": false
+  },
+  {
+    "text": "学习笔记",
+    "link": "/en/feishu__2024_8_27__学习笔记",
+    "items": [
+      {
+        "text": "论文导读",
+        "link": "/en/feishu__2024_8_27_学习笔记_论文导读",
+        "items": [
+          {
+            "text": "论文导读",
+            "link": "/en/feishu__2024_9_31_学习笔记_论文导读_prl  volume 133 部分文章导读"
+          }
+        ],
+        "collapsed": false
+      },
+      {
+        "text": "论文阅读记录",
+        "link": "/en/feishu__2024_8_27_学习笔记_论文阅读记录",
+        "items": [
+          {
+            "text": "量子计算",
+            "link": "/en/feishu__2024_8_27_学习笔记_论文阅读记录_量子计算",
+            "items": [
+              {
+                "text": "Optimal simulation of Deutsch gates and the Fredkin gate",
+                "link": "/en/feishu__2024_8_27_学习笔记_论文阅读记录_量子计算_optimal simulation of deutsch gates and the fredkin gate"
+              },
+              {
+                "text": "Fast Multiqubit Gates through Simultaneous Two-Qubit Gates",
+                "link": "/en/feishu__2024_8_28_学习笔记_论文阅读记录_量子计算_fast multiqubit gates through simultaneous two-qubit gates"
+              },
+              {
+                "text": "变分量子KAN",
+                "link": "/en/feishu__2024_9_6_学习笔记_论文阅读记录_量子计算_变分量子kan"
+              },
+              {
+                "text": "无监督学习检测量子纠缠",
+                "link": "/en/feishu__2024_9_8_学习笔记_论文阅读记录_量子计算_无监督学习检测量子纠缠"
+              }
+            ],
+            "collapsed": false
+          },
+          {
+            "text": "优化控制",
+            "link": "/en/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制",
+            "items": [
+              {
+                "text": "未命名",
+                "link": "/en/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制_"
+              }
+            ],
+            "collapsed": false
+          }
+        ],
+        "collapsed": false
+      },
+      {
+        "text": "AI学习",
+        "link": "/en/feishu__2024_9_16_学习笔记_ai学习",
+        "items": [
+          {
+            "text": "强化学习",
+            "link": "/en/feishu__2024_9_16_学习笔记_ai学习_强化学习"
+          }
+        ],
+        "collapsed": false
+      },
+      {
+        "text": "学习笔记整理",
+        "link": "/en/feishu__2024_10_1_学习笔记_学习笔记整理"
+      }
+    ],
+    "collapsed": false
+  }
+]

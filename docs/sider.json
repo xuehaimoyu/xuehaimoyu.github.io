@@ -17,6 +17,10 @@
       {
         "text": "Vitepress网站搭建与更新记录",
         "link": "/feishu__2024_9_31_技术博客_vitepress网站搭建与更新记录"
+      },
+      {
+        "text": "偏微分方程求解总结",
+        "link": "/feishu__2024_10_1_技术博客_偏微分方程求解总结"
       }
     ],
     "collapsed": false
@@ -26,8 +30,42 @@
     "link": "/feishu__2024_9_31__旅途记录",
     "items": [
       {
-        "text": "旅途记录",
-        "link": "/feishu__2024_9_31_旅途记录_中国"
+        "text": "中国",
+        "link": "/feishu__2024_9_31_旅途记录_中国",
+        "items": [
+          {
+            "text": "上海",
+            "link": "/feishu__2024_10_1_旅途记录_中国_上海",
+            "items": [
+              {
+                "text": "外滩 陆家嘴",
+                "link": "/feishu__2024_10_1_旅途记录_中国_上海_外滩 陆家嘴"
+              },
+              {
+                "text": "临港 滴水湖 东海",
+                "link": "/feishu__2024_10_1_旅途记录_中国_上海_临港 滴水湖 东海"
+              }
+            ],
+            "collapsed": false
+          },
+          {
+            "text": "云南",
+            "link": "/feishu__2024_10_1_旅途记录_中国_云南"
+          },
+          {
+            "text": "北京",
+            "link": "/feishu__2024_10_1_旅途记录_中国_北京"
+          },
+          {
+            "text": "广东",
+            "link": "/feishu__2024_10_1_旅途记录_中国_广东"
+          },
+          {
+            "text": "四川",
+            "link": "/feishu__2024_10_1_旅途记录_中国_四川"
+          }
+        ],
+        "collapsed": false
       }
     ],
     "collapsed": false
@@ -98,6 +136,10 @@
           }
         ],
         "collapsed": false
+      },
+      {
+        "text": "学习笔记整理",
+        "link": "/feishu__2024_10_1_学习笔记_学习笔记整理"
       }
     ],
     "collapsed": false

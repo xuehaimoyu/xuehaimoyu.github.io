@@ -5,6 +5,8 @@ hide: false
 hide_child: false
 keywords:
   - learning_note
+  - Variational quantum
+  - KAN
 categories:
   - learning_note
 create_time: 1728183315

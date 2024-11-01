@@ -1,8 +1,14 @@
 ---
-create_time: 1727533595
+layout: null
 title: Fast Multiqubit Gates through Simultaneous Two-Qubit Gates
+hide: false
+hide_child: false
+keywords:
+  - learning_note
+  - Fast multiqubit gates
 categories:
-  - Study notes
+  - learning_note
+create_time: 1727533595
 ---
 
 # Overview
@@ -37,13 +43,13 @@ $$\begin{aligned}U^{(B,E)}(t)&=e^{-i\delta t/2}\bigg[\cos\bigg(t\sqrt{\Omega^2+\
 
 In order to produce useful states, prevent leakage to $|E\rangle$, there must be a minimum time evolution condition:
 
-$$t_{\mathrm{gate}}=\frac\pi{\sqrt{\Omega^2+\delta^2/4}}.$$
-
-After this, $|B\rangle$ and $|D \rangle$ will get a phase of $-e^{-i\gamma}$, and $|E\rangle$ will not change. (It was written incorrectly in the paper here)
+$$t_{\mathrm{gate}}=\frac\pi{\sqrt{\Omega^2+\delta^2/4}}.$$After this, $|B\rangle$ and $|D \rangle$ will get a phase of $-e^{-i\gamma}$, and $|E\rangle$ will not change. (It was written incorrectly in the paper here)
 
 Meet the evolutionary equations
 
-$$|D\rangle\langle D|-e^{-i\gamma}|B\rangle\langle B|=e^{(i/2)(\pi-\gamma)}e^{-(i/2)(\pi-\gamma)\vec{n}\cdot\vec{\sigma}}$$A similar conclusion is made for another set of basis vectors V:
+$$|D\rangle\langle D|-e^{-i\gamma}|B\rangle\langle B|=e^{(i/2)(\pi-\gamma)}e^{-(i/2)(\pi-\gamma)\vec{n}\cdot\vec{\sigma}}$$
+
+A similar conclusion is made for another set of basis vectors V:
 
 In an effective V-type three-level system, the only function of the gate is to give a phase factor $-e^{-i\gamma}$ at $|111\rangle$
 
