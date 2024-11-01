@@ -2,8 +2,12 @@
 //import Mycomponent from "./components/Mycomponent.vue"
 import DefaultTheme from 'vitepress/theme'
 import { loadOml2d } from 'oh-my-live2d';
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import { useData, useRoute } from 'vitepress';
+
 export default {
   extends: DefaultTheme,
+
   //enhanceApp({app}) { 
     // 注册全局组件
   //  app.component('Mycomponent' , Mycomponent)
@@ -76,5 +80,32 @@ export default {
         ],
       });
     }
-  }
+  },
+  setup() {
+    // Get frontmatter and route
+    const { frontmatter } = useData();
+    const route = useRoute();
+    
+    // Obtain configuration from: https://giscus.app/
+    giscusTalk({
+        repo: 'xuehaimoyu/xuehaimoyu.github.io', 
+        repoId: 'R_kgDONGxwdw',   
+        category: 'General', // default: `General` 
+        categoryId: 'DIC_kwDONGxwd84Cj3_5', 
+        mapping: 'pathname', // default: `pathname`
+        inputPosition: 'top', // default: `top`
+        lang: 'zh-CN', // default: ``
+        lightTheme: 'light', // default: `light`
+        darkTheme: 'transparent_dark', // default: `transparent_dark`
+        // ...
+    }, {
+        frontmatter, route
+    },
+        // Whether to activate the comment area on all pages.
+        // The default is true, which means enabled, this parameter can be ignored;
+        // If it is false, it means it is not enabled.
+        // You can use `comment: true` preface to enable it separately on the page.
+        true
+    );
+}
 }

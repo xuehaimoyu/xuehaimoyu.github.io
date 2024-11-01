@@ -11,18 +11,24 @@ hero:
   tagline: My Record
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 日常
+      link: /feishu__2024_8_26__日常博客
+    - theme: brand
+      text: 学习
+      link: /feishu__2024_8_27__学习笔记
+    - theme: brand
+      text: 旅记
+      link: /feishu__2024_9_31__旅途记录 
+    - theme: brand
+      text: 技术
+      link: /feishu__2024_9_31__技术博客
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 量子计算
+    details: 量子计算学习记录
+  - title: AI学习
+    details: AI真的很有意思
+  - title: 旅途记录
+    details: 世界那么大，我想去看看
 ---
 
