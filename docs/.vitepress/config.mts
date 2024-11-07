@@ -121,7 +121,7 @@ export default defineConfig({
             "link": "/feishu__2024_8_27_学习笔记_论文导读",
             "items": [
               {
-                "text": "论文导读",
+                "text": "PRL Volume 133 部分文章导读",
                 "link": "/feishu__2024_9_31_学习笔记_论文导读_prl  volume 133 部分文章导读"
               }
             ],
@@ -150,6 +150,10 @@ export default defineConfig({
                   {
                     "text": "无监督学习检测量子纠缠",
                     "link": "/feishu__2024_9_8_学习笔记_论文阅读记录_量子计算_无监督学习检测量子纠缠"
+                  },
+                  {
+                    "text": "各向异性不变性和量子相关的分布",
+                    "link": "/feishu__2024_10_5_学习笔记_论文阅读记录_量子计算_各向异性不变性和量子相关的分布论文阅读"
                   }
                 ],
                 "collapsed": false
@@ -169,19 +173,37 @@ export default defineConfig({
             "collapsed": false
           },
           {
-            "text": "AI学习",
-            "link": "/feishu__2024_9_16_学习笔记_ai学习",
+            "text": "学习笔记整理",
+            "link": "/feishu__2024_10_1_学习笔记_学习笔记整理",
             "items": [
               {
-                "text": "强化学习",
-                "link": "/feishu__2024_9_16_学习笔记_ai学习_强化学习"
+                "text": "名词词典及解释",
+                "link": "/feishu__2024_10_5_学习笔记_学习笔记整理_名词词典"
+              },
+              {
+                "text": "量子理论",
+                "link": "/feishu__2024_10_7_学习笔记_学习笔记整理_量子理论",
+                "items": [
+                  {
+                    "text": "高等量子力学学习笔记",
+                    "link": "/feishu__2024_10_7_学习笔记_学习笔记整理_量子理论_高等量子力学学习笔记"
+                  }
+                ],
+                "collapsed": false
+              },
+              {
+                "text": "AI学习",
+                "link": "/feishu__2024_9_16_学习笔记_学习笔记整理_ai学习",
+                "items": [
+                  {
+                    "text": "强化学习",
+                    "link": "/feishu__2024_9_16_学习笔记_学习笔记整理_ai学习_强化学习"
+                  }
+                ],
+                "collapsed": false
               }
             ],
             "collapsed": false
-          },
-          {
-            "text": "学习笔记整理",
-            "link": "/feishu__2024_10_1_学习笔记_学习笔记整理"
           }
         ],
         "collapsed": false
