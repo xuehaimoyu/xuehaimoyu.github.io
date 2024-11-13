@@ -1,6 +1,6 @@
 ---
 layout: null
-title: Introduction
+title: PRL Volume 133
 hide: false
 hide_child: false
 keywords:
@@ -19,7 +19,7 @@ Cover Article:
 <img src="/assets/YnWpbsE11oCWQmx3YKOcbCVJnT0.png" src-width="500" class="markdown-img m-auto" src-height="290" align="center"/>
 Summary:
 
-The initiation and development of the electron-positron cascade requires tight focus in order to achieve maximum laser intensity in standing waves formed by multiple colliding laser pulses. There, a steep space-time gradient of laser intensity expels seed particles from areas of high intensity, which prevents the cascade reaction from occurring. We show that the radially polarized laser pulses ensure that the seed electrons are present in the focal plane at the moment of highest amplitude, even in the case of extreme focusing. This feature reduces the laser power required for cascade initiation by a factor of 100 (80x) compared to circularly (linear) polarized laser pulses with the same focal spot radius and duration. `
+The initiation and development of the electron-positron cascade requires tight focus in order to achieve maximum laser intensity in standing waves formed by multiple colliding laser pulses. There, a steep space-time gradient of laser intensity expels seed particles from areas of high intensity, which prevents the cascade reaction from occurring. We show that the radially polarized laser pulses ensure that the seed electrons are present in the focal plane at the moment of highest amplitude, even in the case of extreme focusing. This feature reduces the laser power required for cascade initiation by a factor of 100 (80x) compared to circularly (linear) polarized laser pulses with the same focal spot radius and duration.
 
 Part of the article
 

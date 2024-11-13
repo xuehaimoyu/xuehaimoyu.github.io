@@ -5,6 +5,7 @@ export default defineConfig({
   title: "个人博客",
   description: "一个记录生活与学习笔记的平台",
   head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     
@@ -100,7 +101,14 @@ export default defineConfig({
               },
               {
                 "text": "广东",
-                "link": "/feishu__2024_10_1_旅途记录_中国_广东"
+                "link": "/feishu__2024_10_1_旅途记录_中国_广东",
+                "items": [
+                  {
+                    "text": "深圳",
+                    "link": "/feishu__2024_10_8_旅途记录_中国_广东_深圳"
+                  }
+                ],
+                "collapsed": false
               },
               {
                 "text": "四川",
@@ -163,8 +171,8 @@ export default defineConfig({
                 "link": "/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制",
                 "items": [
                   {
-                    "text": "未命名",
-                    "link": "/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制_"
+                    "text": "随机博弈分散式表q-learning的样本复杂度",
+                    "link": "/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制_随机博弈分散式表q-learning的样本复杂度"
                   }
                 ],
                 "collapsed": false

@@ -19,7 +19,7 @@ create_time: 1729040741
 </div>
 </div>
 
-# Basic Concepts
+## Basic Concepts
 
 Reinforcement learning is the third type of machine learning paradigm that distinguishes supervised learning from unsupervised learning, the task of supervised learning is to let the system infer the due feedback mechanism according to the corresponding label of each sample on the training set, and then calculate a result as correct as possible on the samples with unknown labels, and unsupervised learning is to discover the hidden structure in the unlabeled data set. However, the goal of reinforcement learning is to maximize the reward rather than finding the hidden dataset structure, and although the method of unsupervised learning to find the intrinsic structure of the data can help the reinforcement learning task, it does not fundamentally solve the problem of maximizing the reward.
 
@@ -84,9 +84,97 @@ Finally, let's talk about the external environment, that is, the model, which is
 
 Original link: https://blog.csdn.net/weixin_45560318/article/details/112981006
 
-# Reinforcement Learning Classification
+## Reinforcement Learning Classification
 
 <img src="/assets/A0QcbeUhWok6nZxvpWxcCKCpnpd.png" src-width="987" class="markdown-img m-auto" src-height="511" align="center"/>
 Original link: https://zhuanlan.zhihu.com/p/466455380
 
 Model-Free does not understand the environment, but obtains information directly from the environment, Model-Based learns and understands the environment, learns to use a model to simulate the environment, and gets feedback through the simulated environment. Model-Based is equivalent to a simulated environment that predicts everything that will happen next and then selects the best scenario through Model-Free.
+
+## Markov chainThe Markov Chain is a mathematical model used to describe the process of state transition, which randomly jumps between a series of possible states, and its next state depends only on the current state, regardless of the previous state. This trait is known as "Markovness" or "no memory".
+
+### The basic elements of the Markov chain
+
+1. State Space All possible states of a Markov chain constitute a state space, usually represented as a finite set or an infinite set. For example, a state space can be a finite number of states, or it can be a continuous interval on a number line.
+
+1. Probability of Transition In a Markov chain, the probability of transferring from one state to another is known as the probability of transfer. Assuming that the current state is \( s \) and the next state is \( s' \), the probability of moving from \( s \) to \( s' \) is expressed as:
+
+\[
+
+P(s'|s) = \Pr(X_{t+1} = s' \mid X_t = s)
+
+\]
+
+where \( X_t \) represents the state at time \( t \). The transition probability is usually represented by the transition matrix \( P \), where each element in the matrix \( P_{ij} \) represents the probability of moving from state \( i \) to state \( j \).
+
+1. Initial State DistributionThe initial state of a Markov chain can be selected based on a probability distribution. For example, if the chain is in state \( s_0 \) at time \( t=0 \), the initial distribution is \(\Pr(X_0 = s_0)\).
+
+1. No memory (Markovness) An important property of the Markov chain is "no memory", that is, the transfer of the current state depends only on the current state and is not affected by the previous sequence of states. For any moment \( t \), there is
+
+\[
+
+\Pr(X_{t+1} = s' \mid X_t = s, X_{t-1} = s_{t-1}, \dots, X_0 = s_0) = \Pr(X_{t+1} = s' \mid X_t = s)
+
+\]
+
+### Types of Markov chains
+
+1. A homogeneous Markov chain is said to be homogeneous (or time-invariant) Markov chain if the probability \( P( s'|s) \) from state \( s \) to state \( s' \) does not change with time at each moment \( t \). The transition matrix of the homogeneous Markov chain remains the same for all time steps.
+
+1. Non-homogeneous Markov chain If the transfer probability changes with time, it is called a non-homogeneous Markov chain. At this point, the transition matrix \( P \) is dependent on time \( t \) and the transition probability may be different for each time step.
+
+### The importance of the Markov chain
+
+1. Stationary DistributionFor homogeneous Markov chains, if there is a probability distribution \(\pi\), the distribution is unchanged after the state transition, i.e
+
+\[
+
+\pi P = \pi
+
+\]
+
+then \(\pi\) is the steady-state distribution (or stationary distribution) of the Markov chain. The steady-state distribution indicates that the Markov chain will stabilize after a sufficient number of time steps.
+
+1. Ergodicity A Markov chain is said to be traversal if it is able to access all other states in the state space from any state after a sufficient period of time. This Markov chain will eventually tend to a steady-state distribution, regardless of the initial state.
+
+1. Irreducibility A Markov chain is said to be irreducible if it has access to all other states. Reducibility is often necessary to achieve ergodability.
+
+1. Periodicity If a state can only be returned at certain fixed intervals, the state is said to be periodic, and the Markov chain is also periodic. If the period of all states is 1 (i.e., it can be returned at any time), the chain is said to be aperiodic (i.e., aperiodic Markov chain).1. Convergence**For irreducible and non-periodic Markov chains, the state distribution of the chain converges to a steady-state distribution when \( t \to \infty \).
+
+### Application of Markov chains
+
+Markov chains are widely used in several fields, such as:
+
+- Economics: Used to model transitions between economic states, such as changes in market growth, recession, boom, and so on.
+- Biology: Used to model changes in the state of gene sequences, ecosystems, etc.
+- Computer Science: Used to predict sequence patterns and search algorithms in areas such as natural language processing, information retrieval, etc.
+- Engineering: In the reliability analysis of the system, the Markov chain models the changes in the state of the equipment, such as the operation, failure, etc.
+
+---
+
+### Example: Simple weather model
+
+Suppose a simple weather system has two states: Sunny (S) and Rainy (R). In this system, the weather for each day depends only on the weather of the previous day, and the probability of transfer is as follows:
+
+- If it's sunny today, there's a 70% chance that it will still be sunny tomorrow and a 30% chance it'll be rainy.
+- If it's raining today, there's a 40% chance that it will be sunny tomorrow and a 60% chance that it will continue to rain.
+
+Its state transition matrix \( P \) is:
+
+\[
+
+P = \begin{bmatrix} 
+
+0.7 & 0.3 \\ 
+
+0.4 & 0.6 
+
+\end{bmatrix}
+
+\]
+
+Here, the state transition matrix \( P \) represents the probability distribution from one state to the next. After multiple shifts, the system tends to a stable probability distribution that represents the long-term ratio of sunny and rainy days.
+
+---
+
+The Markov chain model is simple but powerful, and provides an effective tool for modeling and analyzing stochastic processes.
