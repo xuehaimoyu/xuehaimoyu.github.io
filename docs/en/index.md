@@ -6,23 +6,31 @@ hero:
   image:
     src: /front.jpg
     alt: VitePress
-  name: "个人博客"
-  //text: "一个基于viterpess的个人小站"
+  name: "My Personal Site"
+  //text: "A VitePress site"
   tagline: My Record
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Daily Blog
+      link: /feishu__2024_8_26__日常博客
+    - theme: brand
+      text: Learning
+      link: /feishu__2024_8_27__学习笔记
+    - theme: brand
+      text: Travel
+      link: /feishu__2024_9_31__旅途记录 
+    - theme: brand
+      text: Technique
+      link: /feishu__2024_9_31__技术博客
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Quantum Computing
+    details: The future of computing is here(Maybe)
+  - title: AI Learning
+    details: AI is increasingly becoming a part of our lives,and it is really interesting.
+  - title: Travel Record
+    details: The World is so big, I want to travel around.
 ---
+
+
 

@@ -64,6 +64,10 @@ export default defineConfig({
           {
             "text": "偏微分方程求解总结",
             "link": "/feishu__2024_10_1_技术博客_偏微分方程求解总结"
+          },
+          {
+            "text": "VScode编译latex教程",
+            "link": "/feishu__2024_10_15_技术博客_vscode编译latex教程"
           }
         ],
         "collapsed": false
@@ -113,6 +117,17 @@ export default defineConfig({
               {
                 "text": "四川",
                 "link": "/feishu__2024_10_1_旅途记录_中国_四川"
+              },
+              {
+                "text": "浙江",
+                "link": "/feishu__2024_10_14_旅途记录_中国_浙江",
+                "items": [
+                  {
+                    "text": "绍兴",
+                    "link": "/feishu__2024_10_14_旅途记录_中国_浙江_绍兴"
+                  }
+                ],
+                "collapsed": false
               }
             ],
             "collapsed": false
