@@ -27,7 +27,7 @@ create_time: 1727403607
 
 ## 技术细节
 
-### 1、Deutsch gates
+1、Deutsch gates
 
 $$U_{AR}=|0_{A}\rangle\langle0_{A}|\otimes u_{0}+|1_{A}\rangle\langle1_{A}|\otimes u_{1}.$$
 
@@ -39,7 +39,7 @@ $$U_{AR}=|0_{A}\rangle\langle0_{A}|\otimes u_{0}+|1_{A}\rangle\langle1_{A}|\otim
 
 <img src="/assets/Z43ObiJd6oXTzQxIfciczCN1nSe.png" src-width="873" class="markdown-img m-auto" src-height="301" align="center"/>
 
-### Deutsch门的优化
+## Deutsch门的优化
 
 https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.74.4087文章证明了任何Deutsch门都可以用5个两比特量子逻辑门表示。
 
@@ -103,4 +103,26 @@ $\mathrm{CX}_{A\to B}=\begin{pmatrix}1&0&0&0&0&0&0&0\\0&1&0&0&0&0&0&0\\0&0&1&0&0
 使用3个应该是与经典传统的量子比特不同，使用了三个能级。
 
 <img src="/assets/KqerbgtOPoZhzzxJsYqc5e6Rngh.bmp" src-width="832" class="markdown-img m-auto" src-height="91" align="center"/>
+
+## Fredkin GATE的分解
+
+Fredkin Gate是三量子位门，如果第一个量子位为1，则交换最后两个量子位，其矩阵表达式为：
+
+$$F=\begin{pmatrix}1&0&0&0&0&0&0&0\\0&1&0&0&0&0&0&0\\0&0&1&0&0&0&0&0\\0&0&0&1&0&0&0&0\\0&0&0&0&1&0&0&0\\0&0&0&0&0&0&1&0\\0&0&0&0&0&1&0&0\\0&0&0&0&0&0&0&1\end{pmatrix}.$$
+
+结果证明，Fredkin门使用5个双量子比特门是充分必要的。
+
+<img src="/assets/S4QzbAHZ2oLOUGxFUmUcZ7qknhY.bmp" src-width="483" class="markdown-img m-auto" src-height="168" align="center"/>
+
+$U^2=X$详见https://journals.aps.org/pra/abstract/10.1103/PhysRevA.53.2855
+
+但必须说明，证明也很大程度上依赖于对可能的电路结构的讨论。
+
+Fredkin门的以下对称性质有助于减少情况的数量：
+
+$F_{ABC}=F_{ACB}$$F_{ABC}=F_{ABC}^T$$F_{ACB}=S_{BC}F_{ABC}S_{BC}$
+
+F 门表达为：
+
+$$F_{ABC}=|0\rangle\langle0|\otimes I_{BC}+|1\rangle\langle1|\otimes S_{BC}$$
 

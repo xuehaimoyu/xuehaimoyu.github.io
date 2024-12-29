@@ -68,6 +68,10 @@ export default defineConfig({
           {
             "text": "VScode编译latex教程",
             "link": "/feishu__2024_10_15_技术博客_vscode编译latex教程"
+          },
+          {
+            "text": "一个简单的中文latex模板",
+            "link": "/feishu__2024_11_11_技术博客_一个简单的中文latex模板"
           }
         ],
         "collapsed": false
@@ -101,7 +105,14 @@ export default defineConfig({
               },
               {
                 "text": "北京",
-                "link": "/feishu__2024_10_1_旅途记录_中国_北京"
+                "link": "/feishu__2024_10_1_旅途记录_中国_北京",
+                "items": [
+                  {
+                    "text": "北行一",
+                    "link": "/feishu__2024_10_27_旅途记录_中国_北京_北行一"
+                  }
+                ],
+                "collapsed": false
               },
               {
                 "text": "广东",
@@ -177,6 +188,10 @@ export default defineConfig({
                   {
                     "text": "各向异性不变性和量子相关的分布",
                     "link": "/feishu__2024_10_5_学习笔记_论文阅读记录_量子计算_各向异性不变性和量子相关的分布论文阅读"
+                  },
+                  {
+                    "text": "通用三量子位量子门的实现",
+                    "link": "/feishu__2024_10_22_学习笔记_论文阅读记录_量子计算_通用三量子位量子门的实现"
                   }
                 ],
                 "collapsed": false
@@ -188,6 +203,17 @@ export default defineConfig({
                   {
                     "text": "随机博弈分散式表q-learning的样本复杂度",
                     "link": "/feishu__2024_9_16_学习笔记_论文阅读记录_优化控制_随机博弈分散式表q-learning的样本复杂度"
+                  }
+                ],
+                "collapsed": false
+              },
+              {
+                "text": "AI学习",
+                "link": "/feishu__2024_10_28_学习笔记_论文阅读记录_ai学习",
+                "items": [
+                  {
+                    "text": "KAN",
+                    "link": "/feishu__2024_10_28_学习笔记_论文阅读记录_ai学习_kan"
                   }
                 ],
                 "collapsed": false
@@ -208,8 +234,12 @@ export default defineConfig({
                 "link": "/feishu__2024_10_7_学习笔记_学习笔记整理_量子理论",
                 "items": [
                   {
-                    "text": "高等量子力学学习笔记",
-                    "link": "/feishu__2024_10_7_学习笔记_学习笔记整理_量子理论_高等量子力学学习笔记"
+                    "text": "部分高等量子力学学习笔记",
+                    "link": "/feishu__2024_10_7_学习笔记_学习笔记整理_量子理论_部分高等量子力学学习笔记（更新中）"
+                  },
+                  {
+                    "text": "初等量子力学学习笔记",
+                    "link": "/feishu__2024_10_28_学习笔记_学习笔记整理_量子理论_初等量子力学学习笔记(更新中）"
                   }
                 ],
                 "collapsed": false
@@ -221,6 +251,21 @@ export default defineConfig({
                   {
                     "text": "强化学习",
                     "link": "/feishu__2024_9_16_学习笔记_学习笔记整理_ai学习_强化学习"
+                  },
+                  {
+                    "text": "序列神经网络",
+                    "link": "/feishu__2024_10_29_学习笔记_学习笔记整理_ai学习_序列神经网络"
+                  }
+                ],
+                "collapsed": false
+              },
+              {
+                "text": "量子计算",
+                "link": "/feishu__2024_10_20_学习笔记_学习笔记整理_量子计算",
+                "items": [
+                  {
+                    "text": "三比特门分解整理",
+                    "link": "/feishu__2024_10_20_学习笔记_学习笔记整理_量子计算_三比特门分解整理"
                   }
                 ],
                 "collapsed": false
