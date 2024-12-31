@@ -49,6 +49,10 @@ export default defineConfig({
           {
             "text": "个人博客搭建纪念",
             "link": "/feishu__2024_8_26_日常博客_个人博客搭建纪念"
+          },
+          {
+            "text": "2024个人年终总结",
+            "link": "/feishu__2024_11_31_日常博客_2024年终总结"
           }
         ],
         "collapsed": false
