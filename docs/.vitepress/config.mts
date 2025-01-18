@@ -114,6 +114,10 @@ export default defineConfig({
                   {
                     "text": "北行一",
                     "link": "/feishu__2024_10_27_旅途记录_中国_北京_北行一"
+                  },
+                  {
+                    "text": "北行二",
+                    "link": "/feishu__2025_0_12_旅途记录_中国_北京_北行二"
                   }
                 ],
                 "collapsed": false
